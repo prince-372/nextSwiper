@@ -4,7 +4,7 @@ import girl2 from "../../public/assets/image/girl2.png";
 import men from "../../public/assets/image/men.png";
 import Image from "next/image";
 
-const mycardinfo = [
+const infocard = [
   {
     img: girl1,
 
@@ -29,14 +29,14 @@ const mycardinfo = [
   },
 ];
 export default function Home() {
-  const mycard = mycardinfo.map((mycard, index) => (
+  const carddata = infocard.map((carddata, index) => (
     <div key={index}>
       <div className="behind_card position-relative mb-4 p-3 overflow-hidden">
         <div className="d-sm-flex align-items-center text-center ">
           <div className="flex justify-center">
             <Image
               className="behind_img "
-              src={mycard.img}
+              src={carddata.img}
               alt="card-img"
               width={200}
               height={200}
@@ -44,16 +44,16 @@ export default function Home() {
           </div>
           <div>
             <p className=" flex items-center fw-semibold text-white ms-2 justify-center  ">
-              {mycard.name}
+              {carddata.name}
               <span className="fs-sm fw-normal text-white ms-2">
-                {mycard.nametwo}
+                {carddata.nametwo}
               </span>
             </p>
-            <p className="fs-sm fw-normal  text-white ms-2">{mycard.para1}</p>
+            <p className="fs-sm fw-normal  text-white ms-2">{carddata.para1}</p>
           </div>
         </div>
         <p className="fs-sm fw-normal  text-white mt-2 ms-2 ms-sm-0">
-          {mycard.para2}
+          {carddata.para2}
         </p>
         <span className="ellipesourtem"></span>
       </div>
@@ -68,7 +68,7 @@ export default function Home() {
             Behind our expertise
           </h1>
           <div className="grid lg:grid-cols-3 md:grid-cols-2  pt-5 ">
-            {mycard}
+            {carddata}
           </div>
         </div>
         <div className=" flex justify-center items-center pt-[50px]">
